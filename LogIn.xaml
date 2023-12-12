@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FinalProjectTakeSix.LogIn"
+             Title="LogIn">
+    <!-- Content of the ContentPage -->
+    <ContentPage.Content>
+
+        <!-- Scrollable view for the page -->
+        <ScrollView>
+
+            <!-- Vertical stack layout for arranging child elements vertically -->
+            <VerticalStackLayout Margin="0,20,0,0">
+
+                <!-- Label for the title of the Log In page -->
+                <Label Text="Log In Page"
+                       Padding="10"
+                       HorizontalOptions="Center" 
+                       HeightRequest="100" 
+                       WidthRequest="300"
+                       FontSize="40"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"
+                       TextColor="White"
+                       BackgroundColor="#4529BA"/>
+
+                <!-- Spacer BoxView -->
+                <BoxView HeightRequest="100" Color="Transparent" />
+
+                <!-- Horizontal stack layout for Username -->
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Username: " WidthRequest="200" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="20,0,0,0" />
+                    <StackLayout>
+                        <Entry Placeholder="Enter Username" x:Name="UsernameEntry" />
+                        <BoxView HeightRequest="1" Color="#4529BA" />
+                    </StackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Horizontal stack layout for Password -->
+                <HorizontalStackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <Label Text="Password: " WidthRequest="200" FontAttributes="Bold" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" Margin="20,0,0,0" />
+                    <StackLayout>
+                        <Entry Placeholder="Enter Password" IsPassword="True" x:Name="PasswordEntry" />
+                        <BoxView HeightRequest="1" Color="#4529BA" />
+                    </StackLayout>
+                </HorizontalStackLayout>
+
+                <!-- Spacer BoxView -->
+                <BoxView HeightRequest="20" Color="Transparent" />
+
+                <!-- Horizontal stack layout for Log In button -->
+                <HorizontalStackLayout HorizontalOptions="Center">
+                    <Button x:Name="LogInButton" Padding="10" WidthRequest="100" Margin="0,20,0,0" Text="Log In" CornerRadius="20" BackgroundColor="#4529BA" TextColor="White" Clicked="OnClickLogIn"/>
+                </HorizontalStackLayout>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
